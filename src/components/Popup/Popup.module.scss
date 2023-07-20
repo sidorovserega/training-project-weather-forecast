@@ -1,0 +1,72 @@
+@import '../../styles/variables.scss'; 
+
+.popup {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.25);
+
+  .day_info_block {
+    position: absolute;
+    top: calc(50% - 153px);
+    left: calc(50% - 375px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 750px;
+    background: $light-background;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    padding: 40px;
+  
+    .this_day_info {
+      .this_temp {
+        font-weight: 500;
+        font-size: 60px;
+        color: $primary-color;
+        margin-bottom: 12px;
+      }
+      .this_name {
+        font-size: 25px;
+        line-height: 30px;
+        color: #000;
+        margin-bottom: 12px;
+      }
+      .this_img {
+        svg {
+          width: 53px;
+          height: 53px;
+        }
+        margin-bottom: 12px;
+      }
+      .this_time,
+      .this_city {
+        font-size: 15px;
+        color: $base-color;
+      }
+    }
+
+
+
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      
+      svg {
+        transition: 0.3s;
+      }
+
+      &:hover {
+        svg {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}
+
